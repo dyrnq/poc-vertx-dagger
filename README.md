@@ -2,8 +2,8 @@
 
 This Proof of Concepts showcases how dagger can be used in combination with Vert.x.
 
-* Vert.x version: 4.0.3
-* Dagger version: 2.35.1
+* Vert.x version: ~~4.0.3~~ 4.5.10
+* Dagger version: ~~2.35.1~~ 2.52
 
 The PoC setup is explained in detail in the dedicated [blogpost](https://metaloom.io/blog/day3-vertx-dagger-poc/)
 
