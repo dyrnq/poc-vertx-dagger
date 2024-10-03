@@ -1,6 +1,10 @@
 package io.metaloom.poc.server;
 
-import io.reactivex.Completable;
+//import io.reactivex.Completable;
+
+import io.reactivex.rxjava3.core.Completable;
+
+
 
 public interface RESTServer {
 

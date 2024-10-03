@@ -5,9 +5,9 @@ import javax.inject.Provider;
 import javax.inject.Singleton;
 
 import io.metaloom.poc.server.RESTServer;
-import io.reactivex.Completable;
-import io.vertx.reactivex.core.http.HttpServer;
-import io.vertx.reactivex.ext.web.Router;
+import io.reactivex.rxjava3.core.Completable;
+import io.vertx.rxjava3.core.http.HttpServer;
+import io.vertx.rxjava3.ext.web.Router;
 
 @Singleton
 public class RESTServerImpl implements RESTServer {
@@ -29,7 +29,7 @@ public class RESTServerImpl implements RESTServer {
 		return rxHttpServer
 			.requestHandler(rxRouter)
 			.rxListen()
-			.toCompletable();
+			.ignoreElement();
 	}
 
 	@Override

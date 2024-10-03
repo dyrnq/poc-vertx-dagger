@@ -2,8 +2,8 @@ package io.metaloom.poc.dagger;
 
 import dagger.Module;
 import dagger.Provides;
-import io.vertx.reactivex.core.Vertx;
-import io.vertx.reactivex.ext.web.Router;
+import io.vertx.rxjava3.core.Vertx;
+import io.vertx.rxjava3.ext.web.Router;
 
 @Module
 public class VertxWebModule {

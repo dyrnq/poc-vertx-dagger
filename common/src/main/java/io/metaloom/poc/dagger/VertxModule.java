@@ -23,8 +23,8 @@ public class VertxModule {
 
 	@Provides
 	@Singleton
-	public io.vertx.reactivex.core.Vertx rxVertx(Vertx vertx) {
-		return new io.vertx.reactivex.core.Vertx(vertx);
+	public io.vertx.rxjava3.core.Vertx rxVertx(Vertx vertx) {
+		return new io.vertx.rxjava3.core.Vertx(vertx);
 	}
 
 	@Provides
@@ -35,7 +35,7 @@ public class VertxModule {
 
 	@Provides
 	@Singleton
-	public io.vertx.reactivex.core.file.FileSystem rxFilesystem(io.vertx.reactivex.core.Vertx rxVertx) {
+	public io.vertx.rxjava3.core.file.FileSystem rxFilesystem(io.vertx.rxjava3.core.Vertx rxVertx) {
 		return rxVertx.fileSystem();
 	}
 
@@ -47,7 +47,7 @@ public class VertxModule {
 
 	@Provides
 	@Singleton
-	public io.vertx.reactivex.core.eventbus.EventBus rxEventBus(io.vertx.reactivex.core.Vertx rxVertx) {
+	public io.vertx.rxjava3.core.eventbus.EventBus rxEventBus(io.vertx.rxjava3.core.Vertx rxVertx) {
 		return rxVertx.eventBus();
 	}
 
@@ -61,8 +61,8 @@ public class VertxModule {
 
 	@Provides
 	@Singleton
-	public io.vertx.reactivex.core.http.HttpServer rxHttpServer(HttpServer httpServer) {
-		return new io.vertx.reactivex.core.http.HttpServer(httpServer);
+	public io.vertx.rxjava3.core.http.HttpServer rxHttpServer(HttpServer httpServer) {
+		return new io.vertx.rxjava3.core.http.HttpServer(httpServer);
 	}
 
 	@Provides
@@ -71,8 +71,8 @@ public class VertxModule {
 	}
 
 	@Provides
-	public io.vertx.reactivex.ext.web.Router rxRouter(io.vertx.reactivex.core.Vertx rxVertx) {
-		return io.vertx.reactivex.ext.web.Router.router(rxVertx);
+	public io.vertx.rxjava3.ext.web.Router rxRouter(io.vertx.rxjava3.core.Vertx rxVertx) {
+		return io.vertx.rxjava3.ext.web.Router.router(rxVertx);
 	}
 
 }
